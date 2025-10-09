@@ -1,0 +1,55 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+sysinfo.txt
+
+# User-specific files
+*.user
+*.userprefs
+*.suo
+*.tmp
+*.pidb
+*.booproj
+*.svd
+
+# Visual Studio / Rider / VS Code
+.vscode/
+.vs/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Visual Studio project and solution files
+*.csproj
+*.unityproj
+*.sln
+
+# Unity packages cache
+Packages/manifest.json.lock
+
+# Uncomment to ignore the whole project except Assets/ and ProjectSettings/
+# /* 
+# !/Assets/
+# !/ProjectSettings/
+# !/Packages/
+
+# Keep Unity asset meta and ProjectSettings
+!/[Aa]ssets/**/*.meta
+!/[Pp]roject[Ss]ettings/**
+
+# Ignore exported packages
+*.unitypackage
+
+# Builds
+*.apk
+*.aab
+*.exe
+*.app
