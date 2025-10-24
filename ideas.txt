@@ -1,0 +1,2 @@
+Add sneak movement to sneak behind enemies without getting aggro.
+Healthbar animation when taking damage?

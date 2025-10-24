@@ -4,34 +4,34 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 5f;
 
-    private Vector2 _movement;
-    private Rigidbody2D _rb;
-    private Animator _animator;
+    private Vector2 movement;
+    private Rigidbody2D rb;
+    private Animator animator;
 
-    private const string _horizontal = "horizontal";
-    private const string _vertical = "vertical";
-    private const string _lastHorizontal = "lastHorizontal";
-    private const string _lastVertical = "lastVertical";
+    private const string horizontal = "horizontal";
+    private const string vertical = "vertical";
+    private const string lastHorizontal = "lastHorizontal";
+    private const string lastVertical = "lastVertical";
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        _movement.Set(InputManager.Movement.x, InputManager.Movement.y);
-        _rb.linearVelocity = _movement * _moveSpeed;
-        _animator.SetFloat(_horizontal, _movement.x);
-        _animator.SetFloat(_vertical, _movement.y);
+        movement.Set(InputManager.Movement.x, InputManager.Movement.y);
+        rb.linearVelocity = movement * moveSpeed;
+        animator.SetFloat(horizontal, movement.x);
+        animator.SetFloat(vertical, movement.y);
 
-        if(_movement != Vector2.zero)
+        if(movement != Vector2.zero)
         {
-            _animator.SetFloat(_lastHorizontal, _movement.x);
-            _animator.SetFloat(_lastVertical, _movement.y);
+            animator.SetFloat(lastHorizontal, movement.x);
+            animator.SetFloat(lastVertical, movement.y);
         }
     }
 }
