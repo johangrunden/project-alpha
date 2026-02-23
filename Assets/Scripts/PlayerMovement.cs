@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
+    public Player_Combat player_Combat;
 
     private const string horizontal = "horizontal";
     private const string vertical = "vertical";
@@ -23,12 +24,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetButtonDown("Stab"))
+        {
+            player_Combat.Attack();
+        }
+
         movement.Set(InputManager.Movement.x, InputManager.Movement.y);
         rb.linearVelocity = movement * moveSpeed;
         animator.SetFloat(horizontal, movement.x);
         animator.SetFloat(vertical, movement.y);
 
-        if(movement != Vector2.zero)
+        if (movement != Vector2.zero)
         {
             animator.SetFloat(lastHorizontal, movement.x);
             animator.SetFloat(lastVertical, movement.y);

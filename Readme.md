@@ -1,3 +1,3 @@
-\# Project Alpha - State of the game
+\# Project Alpha 
 
-![State of the game](images/project_alpha_state_of_game.png?raw=true)
+Top down pixel art adventure game in progress
